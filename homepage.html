@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Website</title>
+    <link rel="stylesheet" href="homePagestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <section>
+      <input type="checkbox" id="check">
+      <header>
+        </div>
+        <h2><a href="https://www.thesparksfoundationsingapore.org/#" class="logo"><img src="https://www.thesparksfoundationsingapore.org/images/logo_small.png" width="32%" height="32%"></a></h2>
+        <div class="navigation">
+          <a href="#">HOME</a>
+          <a href="services.html">SERVICES</a>
+          <a href="https://www.thesparksfoundationsingapore.org/contact-us/">CONTACT US</a>
+          <a href="https://www.thesparksfoundationsingapore.org/about-us/">ABOUT US</a>
+        </div>
+        <label for="check">
+        <i class="fas fa-bars menu-btn"></i>
+        <i class="fas fa-times close-btn"></i>
+        </label>
+      </header>
+      <div class="content">
+        <div class="info">
+          <h2>Make Donation,and <br><span>Show Your Support!</span></h2>
+          <p>There are many ways to push for much-needed<br>reforms:<br>"One way is to make a donation."<br>It doesn't matter much whether you contribute<br>privately or publicaly - either way is good.<br>What matters is your true intention.<br> A little help of yours can prevent the<br>situation getting more worse for them.<br>Even a small donation would help us a lot.<br> To help the poor to raise their head and face the future with<br> pride and hope with The Sparks Foundation.</p>
+          <a onclick="onButtonClick()" class="info-btn">DONATE</a>
+        </div>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.facebook.com/profile.php?id=100025786994792"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/HarshRa08572874?s=08"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/rajh8155/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </section>
+     <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <script>
+        /* Start client-defined Callback Handler Functions */
+      function onOpenHandler () {
+        alert('Payments Modal is Opened');
+      }
+
+      function onCloseHandler () {
+        alert('Payments Modal is Closed');
+      }
+
+      function onPaymentSuccessHandler (response) {
+        alert('Payment Success');
+        console.log('Payment Success Response', response);
+      }
+
+      function onPaymentFailureHandler (response) {
+        alert('Payment Failure');
+        console.log('Payment Failure Response', response);
+      }
+      /* End client-defined Callback Handler Functions */
+
+      /* Configuring Handlers */
+      Instamojo.configure({
+        handlers: {
+          onOpen: onOpenHandler,
+          onClose: onCloseHandler,
+          onSuccess: onPaymentSuccessHandler,
+          onFailure: onPaymentFailureHandler
+        }
+      });
+      function onButtonClick() {
+        Instamojo.open('https://test.instamojo.com/@1906098');
+      }
+    // Toggle between hiding and showing blog replies/comments
+    document.getElementById("myBtn").click();
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function likeFunction(x) {
+      x.style.fontWeight = "bold";
+      x.innerHTML = "&#10003; Liked";
+    }
+    </script>
+
+  </body>
+</html>
