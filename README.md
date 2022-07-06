@@ -1,1 +1,1 @@
-# The Foundation Sparks Project
+# The Sparks Foundation Project
